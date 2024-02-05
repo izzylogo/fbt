@@ -1,0 +1,85 @@
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 100px 15px;
+    &::before{
+        content: "\f4c3";
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 30px 15px 20px;
+        background: #ba0215;
+        font-family: "Font Awesome 6 Pro";
+        font-size: 32px;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    .section4-content{
+        flex: 1;
+        text-align: left;
+
+        h2{
+            display: flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            margin-bottom: 10px;
+            // gap: 15px;
+            // font-family: freight-big-pro,"Times New Roman";
+            // font-size: 60px;
+            // line-height: 46px;
+            // color: #fff;
+            // z-index: 2;
+            &::after{
+                content: "";
+                width: 38px;
+                border-top: 2px solid #cb9d08;
+            }
+        }
+    }
+}
+
+.section4-image{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+    z-index: 1;
+    position: relative;
+    padding: 12px;
+    width: 100%;
+    &::before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: calc(100% + (2*0px));
+        width: calc(100% + (2*0px));
+        border-style: solid;
+        -o-border-image: url("@/assets/gold-border.svg");
+        border-image: url("@/assets/gold-border.svg");
+        border-image-repeat: stretch;
+        border-image-slice: 31;
+        border-width: 28px;
+    }
+    img{
+        -webkit-mask: radial-gradient(28px at -4px -4px,#0000 98%,#000) 0 0,radial-gradient(28px at calc(100% + 4px) -4px,#0000 98%,#000) 100% 0,radial-gradient(28px at -4px calc(100% + 4px),#0000 98%,#000) 0 100%,radial-gradient(28px at calc(100% + 4px) calc(100% + 4px),#0000 98%,#000) 100% 100%;
+        mask: radial-gradient(28px at -4px -4px,#0000 98%,#000) 0 0,radial-gradient(28px at calc(100% + 4px) -4px,#0000 98%,#000) 100% 0,radial-gradient(28px at -4px calc(100% + 4px),#0000 98%,#000) 0 100%,radial-gradient(28px at calc(100% + 4px) calc(100% + 4px),#0000 98%,#000) 100% 100%;
+        -webkit-mask-size: 51% 51%;
+        mask-size: 51% 51%;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        width: 100%;
+        aspect-ratio: 1.5;
+        -o-object-fit: cover;
+        object-fit: cover;
+        -o-object-position: center center;
+        object-position: center center;
+    }
+}

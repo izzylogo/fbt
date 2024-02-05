@@ -1,0 +1,100 @@
+.login-form{
+    background-color: #021c40;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    width: 330px;
+    top: 100%;
+    z-index: 1000;
+    animation: slowly .5 ease;
+
+    .contained{
+        padding: 45px 25px 15px!important;
+
+        h2{
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-family: freight-big-pro,"Times New Roman";
+            font-size: 25px;
+            font-weight: 700;
+            line-height: normal;
+
+            &::after{
+                content: "";
+                width: 38px;
+                border-top: 2px solid #cb9d08;
+            }
+        }
+
+        form{
+            position: relative;
+            z-index: 1000;
+            input{
+                padding: 15px 30px;
+                width: 100%;
+                border: 0;
+                border-radius: 0;
+                font-weight: 700;
+                font-size: 16px;
+                border: 1px solid white;
+                color: white;
+                margin-bottom: 20px;
+            }
+
+            button{
+                border: 1px solid #cb9d08;
+                background-color: transparent;
+                padding: 10px 35px;
+                border-width: 2px;
+                border-radius: 0;
+                font-size: 14px;
+                font-weight: 700;
+                white-space: nowrap;
+                transition: .2s ease;
+
+                &:hover{
+                    background-color: white;
+                    color: #021c40;
+                }
+            }
+        }
+
+        .bottom{
+            margin-top: 20px;
+        }
+    }
+
+    @keyframes slowly {
+        0%{
+            height: 0%;
+        }
+
+        25%{
+            height: 25%;
+        }
+
+        50%{
+            height: 50%;
+        }
+
+        75%{
+            height: 75%;
+        }
+
+        100%{
+            height: 100%;
+        }
+    }
+}
+
+.show-login{
+    display: none;
+}
