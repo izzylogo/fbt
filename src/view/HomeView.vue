@@ -1,43 +1,49 @@
 <template>
-    <div>
-        <div class="hero">
-            <div class="cover">
-                <SearchTopComponent/>
-                <NavbarComponent/>
-                
-            </div>
-            <!-- <HeroComponent/> -->
-            <div class="cover2">
-                <div class="title">
-                    <h1>
-                        Helping Texans
-                        <br>
-                        <em>bank locally</em>
-                        since 1880
-                    </h1>
-                    <button class="learn">Learn More</button>
+    <v-layout>
+        <!-- <v-navigation-drawer v-model="drawer" location="right" temporary>
+            <v-list :items="items"></v-list>
+        </v-navigation-drawer> -->
+
+        <div>
+            <div class="hero">
+                <div class="cover">
+                    <SearchTopComponent/>
+                    <NavbarComponent :drawer="drawerToggle"/>
+                    
+                </div>
+                <!-- <HeroComponent/> -->
+                <div class="cover2">
+                    <div class="title">
+                        <h1>
+                            Helping Texans
+                            <br>
+                            <em>bank locally</em>
+                            since 1880
+                        </h1>
+                        <button class="learn">Learn More</button>
+                    </div>
+                </div>
+                <!-- <v-btn>Clickables</v-btn> -->
+                <div class="image">
+                    <img src="../assets/background.jpg" alt="logo" class="background-image">
                 </div>
             </div>
-            <!-- <v-btn>Clickables</v-btn> -->
-            <div class="image">
-                <img src="../assets/background.jpg" alt="logo" class="background-image">
-            </div>
+    
+            <Together />
+    
+            <!-- Section 3 -->
+            <SectionThree />
+    
+            <!-- section 4 -->
+            <SectionFour />
+    
+            <!-- more information -->
+            <MoreInfo/>
+    
+            <!-- footer -->
+            <FooterComp />
         </div>
-
-        <Together />
-
-        <!-- Section 3 -->
-        <SectionThree />
-
-        <!-- section 4 -->
-        <SectionFour />
-
-        <!-- more information -->
-        <MoreInfo/>
-
-        <!-- footer -->
-        <FooterComp />
-    </div>
+    </v-layout>
 </template>
 
 <script>
@@ -63,12 +69,36 @@ export default {
         // eslint-disable-next-line
         MoreInfo,
         FooterComp,
-    }
+    },
+    data: () => ({
+      drawer: true,
+      items: [
+        {
+          title: 'Foo',
+          value: 'foo',
+        },
+        {
+          title: 'Bar',
+          value: 'bar',
+        },
+        {
+          title: 'Fizz',
+          value: 'fizz',
+        },
+        {
+          title: 'Buzz',
+          value: 'buzz',
+        },
+      ],
+    }),
+
 }
 </script>
 
 <style lang="scss" scoped>
-
+.v-layout{
+    display: block;
+}
 .hero{
     height: 640px;
 
@@ -151,6 +181,10 @@ export default {
         @media (max-width: 990px) {
             height: auto;
             min-height: 500px;
+        }
+
+        @media (max-width: 600px) {
+            min-height: 400px;
         }
     }
 }

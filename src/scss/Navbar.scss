@@ -33,6 +33,10 @@
         min-height: 80px;
         display: flex;
         align-items: center;
+
+        @media (max-width: 990px) {
+            min-height: 55px;
+        }
         .site-logo{
          
                 img{
@@ -50,9 +54,10 @@
 
     .right{
         margin-right: 130px;
+        z-index: 10;
 
         @media (max-width: 990px) {
-            margin-right: 70px;
+            margin-right: 100px;
         }
         ul{
             li{
@@ -79,4 +84,99 @@
             }
         }
     }
+}
+
+.side-bar{
+    position: fixed;
+    // right: 0;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    transition: .3s ease;
+
+    .meun{
+        background-color: #f9f8f4;
+        width: 50%;
+        height: 100vh;
+        
+        .offcanvas-header{
+            display: flex;
+            justify-content: end;
+            padding: 25px;
+        }
+
+        .offcanvas-body{
+            padding: 0px 25px 25px;
+
+            .site-header-primary{
+                ul{
+                    // display: flex;
+                    // flex-direction: column;
+                    // align-items: start;
+                    border-bottom: 2px solid #cb9d08;
+                    list-style: none;
+                    text-align: left;
+
+                    li{
+                        border-top: 2px solid #cb9d08;
+                        padding: 15px 0px;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .site-header-global{
+                ul{
+                    margin-top: 15px;
+                    li{
+                        a{
+                            padding: 10px 0px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: start;
+                            color: black;
+                        }
+                    }
+                }
+
+                form{
+                    .input-cover{
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        padding: 10px;
+                        padding-right: 30px;
+                        background-color: white;
+
+                        input{
+                            outline: none;
+                            font-size: 16px;
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dont-show{
+    position: fixed;
+    // right: 0;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    transition: .3s ease;
+}
+
+.overflow{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    background-color: black;
+    opacity: .5;
 }

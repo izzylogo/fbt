@@ -16,28 +16,58 @@
                         <li>Services</li>
                         <li>About</li>
                     </ul>
-                    <div class="hamburger" @click.stop="drawer = !drawer">
+                    <div class="hamburger" @click="toggleDrawer">
                         <Icon icon="ic:round-menu" width="24" height="24" />
                     </div>
                 </div>
             </nav>
-            <div class="side-bar"></div>
-            <!-- <v-navigation-drawer v-model="drawer" temporary>
-                <v-list density="compact" nav>
-                <v-list-item
-                    prepend-icon="mdi-view-dashboard"
-                    title="Home"
-                    value="home"
-                ></v-list-item>
-                <v-divider color="red"></v-divider>
-                <v-list-item
-                    prepend-icon="mdi-forum"
-                    title="About"
-                    value="about"
-                ></v-list-item>
-                </v-list>
-            </v-navigation-drawer> -->
-        <!-- </v-layout> -->
+
+            <!-- side bar -->
+            <div :class="{'side-bar': drawer, 'dont-show': !drawer}">
+                <div class="menu-cover">
+                    <div class="meun">
+                        <div class="offcanvas-header">
+                            <div @click="drawer = false" style="cursor: pointer;">
+                                <Icon icon="iconoir:cancel" width="24" height="24" />
+                            </div>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="site-header-primary">
+                                <ul>
+                                    <li>Personal</li>
+                                    <li>Business</li>
+                                    <li>Services</li>
+                                    <li>About</li>
+                                </ul>
+                            </div>
+                            <div class="site-header-global">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <Icon icon="mdi:location" style="color: #cb9d08" />
+                                            <span>Locations</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <Icon icon="ic:round-phone" style="color: #cb9d08" />
+                                            <span>Contact</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <form>
+                                    <div class="input-cover">
+                                        <input type="text" placeholder="Search">
+                                        <Icon icon="ic:sharp-search" style="color: #cb9d08" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow" @click="drawer = false" :style="{display: drawer ? 'block' : 'none'}"></div>
+            
     </div>
 </template>
 
@@ -52,9 +82,17 @@ export default {
         drawer: null,
       }
     },
+   methods: {
+    toggleDrawer() {
+        this.drawer = !this.drawer
+        console.log(this.drawer)
+    }
+   }
 }
 </script>
 
 <style lang="scss" scoped>
 @import "../../scss/Navbar.scss";
+
+
 </style>
