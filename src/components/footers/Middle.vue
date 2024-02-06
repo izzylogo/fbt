@@ -54,11 +54,22 @@ import { Icon } from "@iconify/vue";
         display: flex;
         gap: 100px;
 
+        @media (max-width: 990px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
     }
 }
 .left{
     flex: 1.5;
     text-align: left;
+
+    @media (max-width: 990px) {
+        text-align: center;
+    }
     p{
         font-size: 12px;
     }
@@ -70,6 +81,12 @@ import { Icon } from "@iconify/vue";
     flex: 1;
 
     ul{
+        @media (max-width: 990px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
         li{
             margin-top: 10px;
             font-size: 13px;

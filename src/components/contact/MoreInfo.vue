@@ -24,6 +24,12 @@
 </script>
 
 <style lang="scss" scoped>
+
+.container{
+    @media (max-width: 900px) {
+        padding: 20px 30px;
+    }
+}
 .contact{
     background-repeat: no-repeat;
     background-position: 0 -55px;
@@ -41,6 +47,11 @@
         position: relative;
         z-index: 1;
         background-color: white;
+
+        @media (max-width: 990px) {
+            flex-direction: column;
+            gap: 30px;
+        }
         &::before{
             content: "";
             position: absolute;
@@ -65,6 +76,10 @@
                 font-size: 50px;
                 line-height: 55px;
                 color: #021c40;
+
+                @media (max-width: 990px) {
+                    font-size: 25px;
+                }
             }
         }
 

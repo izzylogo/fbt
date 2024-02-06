@@ -58,13 +58,30 @@ import { Icon } from "@iconify/vue";
     justify-content: space-between;
     gap: 20px;
     padding: 45px 10px;
+
+    @media (max-width: 990px) {
+        flex-direction: column;
+    }
 }
 
 ul{
+    text-align: center;
+
+    @media (max-width: 990px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
     li{
         display: inline-block;
         margin-right: 20px;
         align-items: center;
+
+        @media (max-width: 990px) {
+            display: block;
+        }
         
         a{
             display: flex;

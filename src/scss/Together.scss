@@ -7,6 +7,11 @@
     padding-bottom: 100px;
     position: relative;
 
+    @media (max-width: 990px) {
+        padding-bottom: 0px;
+        min-height: auto;
+    }
+
     &::before{
         content: "";
         position: absolute;
@@ -15,6 +20,10 @@
         width: 100%;
         height: 40%;
         background: #f9f8f4;
+
+        @media (max-width:  990px) {
+            display: none;
+        }
     }
 }
 

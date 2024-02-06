@@ -33,6 +33,10 @@
             color: #fff;
             z-index: 2;
 
+            @media (max-width:990px) {
+                font-size: 35px;
+            }
+
             &::after{
                 content: "";
                 width: 38px;

@@ -12,7 +12,7 @@
                     <div class="drop">
                         <v-menu transition="slide-y-transition">
                             <template v-slot:activator="{ props }">
-                                <v-btn color="primary" v-bind="props"> Slide Y Transition </v-btn>
+                                <v-btn v-bind="props"> Slide Y Transition </v-btn>
                             </template>
                             <v-list>
                                 <v-list-item v-for="(item, i) in items" :key="i">
@@ -98,10 +98,10 @@ import { Icon } from "@iconify/vue";
         name: "PersonalComp",
         data: () => ({
             items: [
-                { title: 'Click Me' },
-                { title: 'Click Me' },
-                { title: 'Click Me' },
-                { title: 'Click Me 2' },
+                    { title: 'Manage my money simply' },
+                    { title: 'Save more money' },
+                    { title: 'Get a money mortgage' },
+                    { title: 'Access calculators to help plan' },
             ],
         }),
     }
@@ -117,15 +117,35 @@ import { Icon } from "@iconify/vue";
     gap: 100px;
     padding: 60px 0px;
 
+    @media (max-width: 990px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
     .left{
         flex: 1;
+
+
 
         h2{
             font-family: Bodoni Moda, 'Courier New', Courier, monospace;
             font-size: 55px;
 
+            @media (max-width: 990px) {
+                font-size: 28px;
+                text-align: center;
+            }
+
             em{
                 font-family: Great vibes, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+        }
+        p{
+            @media (max-width: 990px) {
+                font-size: 13px;
             }
         }
     }

@@ -44,12 +44,22 @@
     padding: 30px 5px;
     text-align: left;
 
+    @media (max-width: 990px) {
+        text-align: center;
+    }
+
     .left{
         margin-bottom: 30px;
         ul{
             display: flex;
             gap: 10px 15px;
             flex-wrap: wrap;
+
+            @media (max-width: 990px) {
+                align-items: center;
+                padding: 20px;
+                justify-content: center;
+            }
 
             li{
                 font-size: 12px;

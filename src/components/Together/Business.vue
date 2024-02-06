@@ -20,22 +20,6 @@
                                 </v-list-item>
                             </v-list>
                         </v-menu>
-    
-                        <!-- or -->
-                        <!-- <v-expansion-panels>
-                            <v-expansion-panel>
-                                <v-expansion-panel-title>
-                                    Select One
-                                </v-expansion-panel-title>
-                                <v-expansion-panel-text>
-                                    <ul>
-                                        <li>Learn more about a personal loan</li>
-                                        <li>Asks about business loan for my company</li>
-                                        <li>Find out which SBA Loan can help my business</li>
-                                    </ul>
-                                </v-expansion-panel-text>
-                            </v-expansion-panel>
-                        </v-expansion-panels> -->
                     </div>
                 </div>
             </div> 
@@ -99,10 +83,9 @@ import { Icon } from "@iconify/vue";
         name: "BusinessComp",
         data: () => ({
             items: [
-                { title: 'Click Me' },
-                { title: 'Click Me' },
-                { title: 'Click Me' },
-                { title: 'Click Me 2' },
+            { title: 'Learn more about a personal loan' },
+                { title: 'Ask about business loan for my company' },
+                { title: 'Find out which SBA loan can help my  business' },
             ],
         }),
 
@@ -118,15 +101,36 @@ import { Icon } from "@iconify/vue";
     gap: 100px;
     padding: 60px 0px;
 
+    @media (max-width: 990px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
     .left{
         flex: 1;
+
+
 
         h2{
             font-family: Bodoni Moda, 'Courier New', Courier, monospace;
             font-size: 55px;
 
+            @media (max-width: 990px) {
+                font-size: 28px;
+                text-align: center;
+            }
+
             em{
                 font-family: Great vibes, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+        }
+        p{
+            @media (max-width: 990px) {
+                font-size: 13px;
             }
         }
     }

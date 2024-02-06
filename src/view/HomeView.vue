@@ -71,6 +71,10 @@ export default {
 
 .hero{
     height: 640px;
+
+    @media (max-width: 990px) {
+        height: 100%;
+    }
 }
 
 .cover{
@@ -89,11 +93,19 @@ export default {
     text-align: center;
     margin-top: 20px;
 
+    @media (max-width: 990px) {
+        margin-bottom: 70px;
+    }
+
     h1{
         font-size: 60px;
         color: #021c40;
         font-family: Bodoni Moda, 'Courier New', Courier, monospace;
         font-weight: 900;
+
+        @media (max-width: 990px) {
+            font-size: 30px;
+        }
 
         em{
             font-family: Great vibes, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -109,6 +121,10 @@ export default {
         transition: .3s ease;
         font-weight: 700;
 
+        @media (max-width: 990px) {
+            margin-top: 10px;
+        }
+
         &:hover{
             background-color: #034ba6;
             color: white;
@@ -122,6 +138,7 @@ export default {
     left: 0;
     right: 0;
     max-height: 640px;
+    height: auto;
 
     img{
         height: 100%;
@@ -130,6 +147,11 @@ export default {
         object-fit: cover;
         // -o-object-position: center center;
         object-position: center center;
+
+        @media (max-width: 990px) {
+            height: auto;
+            min-height: 500px;
+        }
     }
 }
 </style>

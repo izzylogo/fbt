@@ -132,6 +132,11 @@ export default {
         font-weight: 700;
         transition: .6s ease;
 
+        @media (max-width: 990px) {
+            padding: 10px;
+            font-size: 13px;
+        }
+
         &:hover{
             background-color: #021c40;
         }
