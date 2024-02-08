@@ -27,8 +27,9 @@
                         <form >
                             <input type="text" placeholder="Enter Username" v-model="email">
                             <input type="password" placeholder="Enter Password" v-model="password">
-                            <button v-if="!loginDetail" >Login</button>
-                            <button v-else>
+                            <!-- <button v-if="!loginDetail" >Login</button> -->
+                            <p v-if="!loginDetail" style="font-size: 10px; color: red; text-align: center;">Input Email and Password</p>
+                            <button v-if="loginDetail">
                                 <router-link to="/profile">
                                     Login
                                 </router-link>
@@ -77,7 +78,7 @@ export default {
         },
 
         showError() {
-            
+
         }
     }
 }
