@@ -25,9 +25,14 @@
                     <div class="contained">
                         <h2>Online Banking Login</h2>
                         <form >
-                            <input type="text" placeholder="Enter Username">
-                            <input type="password" placeholder="Enter Password">
-                            <button>Login</button>
+                            <input type="text" placeholder="Enter Username" v-model="email">
+                            <input type="password" placeholder="Enter Password" v-model="password">
+                            <button v-if="!loginDetail" >Login</button>
+                            <button v-else>
+                                <router-link to="/profile">
+                                    Login
+                                </router-link>
+                            </button>
                         </form>
                         <div class="bottom">
                             <div class="reg">
@@ -54,13 +59,27 @@ export default {
    data() {
     return{
         showLogin: false,
+        email: "",
+        password: "",
     }
    },
+   computed: {
+       loginDetail() {
+           const correctEmail = "annefowler@gmail.com"
+           const correctPassword = "Hanna17092"
+    
+           return this.email === correctEmail & this.password === correctPassword
+       },
+   },
    methods: {
-    toggleLogin() {
-        this.showLogin = !this.showLogin
+        toggleLogin() {
+            this.showLogin = !this.showLogin
+        },
+
+        showError() {
+            
+        }
     }
-   }
 }
 </script>
 

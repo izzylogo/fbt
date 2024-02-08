@@ -1,7 +1,4 @@
-import {
-    createRouter,
-    createWebHistory,
-  } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
   import HomeView from '@/view/HomeView'
   import ProfileView from '@/view/ProfileView'
   
@@ -14,20 +11,15 @@ import {
     {
       path: '/profile',
       name: 'profile',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: ProfileView,
     },
    
   ]
   
-  // const router = createRouter({
-  //   history: createWebHashHistory(),
-  //   routes
-  // })
+ 
   const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    // history: createWebHistory(process.env.BASE_URL),
+    history: createWebHistory(),
     routes,
   })
   
