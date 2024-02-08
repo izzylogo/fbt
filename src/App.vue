@@ -1,21 +1,19 @@
 <template>
   <v-app>
     <v-main>
-      <HomeView />
+      <router-view/>
+      <FooterComp/>
     </v-main>
   </v-app>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import HomeView from '@/view/HomeView'
-
+import FooterComp from '@/components/footers/Footer'
 export default {
   name: 'App',
-  components: {
-    // HelloWorld, 
-    HomeView,
-  }
+  components: {FooterComp,}
+  
 }
 </script>
 

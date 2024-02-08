@@ -41,7 +41,7 @@
             <MoreInfo/>
     
             <!-- footer -->
-            <FooterComp />
+            <!-- <FooterComp /> -->
         </div>
     </v-layout>
 </template>
@@ -55,7 +55,7 @@ import Together from '../components/Together/Together.vue';
 import SectionThree from '@/components/Section3/SectionThree.vue';
 import SectionFour from '@/components/Section4/SectionFour';
 import MoreInfo from '@/components/contact/MoreInfo';
-import FooterComp from '../components/footers/Footer.vue';
+// import FooterComp from '../components/footers/Footer.vue';
 
 export default {
     name: "HomeView",
@@ -68,7 +68,7 @@ export default {
         SectionFour,
         // eslint-disable-next-line
         MoreInfo,
-        FooterComp,
+        // FooterComp,
     },
     data: () => ({
       drawer: true,

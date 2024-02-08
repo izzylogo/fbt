@@ -26,6 +26,7 @@
                         <h2>Online Banking Login</h2>
                         <form >
                             <input type="text" placeholder="Enter Username">
+                            <input type="password" placeholder="Enter Password">
                             <button>Login</button>
                         </form>
                         <div class="bottom">

@@ -12,7 +12,7 @@
                     <div class="drop">
                         <v-menu transition="slide-y-transition">
                             <template v-slot:activator="{ props }">
-                                <v-btn color="primary" v-bind="props"> Slide Y Transition </v-btn>
+                                <v-btn  v-bind="props"> select one </v-btn>
                             </template>
                             <v-list>
                                 <v-list-item v-for="(item, i) in items" :key="i">

@@ -19,6 +19,13 @@
     font-weight: 700;
 }
 
+@media (max-width: 990px) {
+    .button{
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
 button:hover{
     background-color: #034ba6;
     color: white;

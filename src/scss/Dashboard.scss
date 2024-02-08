@@ -1,0 +1,64 @@
+.v-toolbar__content{
+    // align-items: center;
+    display: block !important;
+    // flex: 0 0 auto;
+    // position: relative;
+    transition: inherit;
+    width: 100%;
+}
+
+.dashboard-top{
+    padding: 0px 30px;
+    text-align: left;
+
+    h2{
+        span{
+            font-size: 13px;
+            color: orangered;
+        }
+    }
+
+    p{
+        span{
+            font-size: 10px;
+        }
+    }
+}
+
+.dashlogo{
+    @media (max-width: 990px) {
+        width: 60% !important;
+        min-width: 130px;
+    }
+}
+
+.dashbtn{
+    @media (max-width: 660px) {
+        padding: 5px 15px;
+        font-size: 13px;
+        width: 100px;
+    }
+}
+
+.dashboard-table-cover{
+    @media (max-width: 660px) {
+        height: 80dvh;
+    }
+}
+
+.dashboard-table{
+    padding: 10px;
+
+    table{
+        thead{
+            background-color: #021c40 !important;
+            color: white;
+            tr th{
+                background-color: transparent !important;
+            }
+        }
+        tbody{
+            background-color: #f9f8f4 !important;
+        }
+    }
+}

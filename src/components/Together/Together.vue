@@ -3,7 +3,7 @@
         <div class="together-cover">
             <v-tabs fixed-tabs v-model="tab" bg-color="#021c40" class="tabs_contain">
                 <v-tab value="one">Business</v-tab>
-                <v-tab value="two">Item Two</v-tab>
+                <v-tab value="two">Personal</v-tab>
             </v-tabs>
         
             <v-window v-model="tab">
