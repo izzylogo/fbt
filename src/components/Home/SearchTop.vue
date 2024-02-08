@@ -27,7 +27,11 @@
                         <form >
                             <input type="text" placeholder="Enter Username" v-model="email">
                             <input type="password" placeholder="Enter Password" v-model="password">
-                            <button v-if="!loginDetail" >Login</button>
+                            <div class="warn" v-if="!loginDetail">
+                                <button disabled style="color: inherit; background-color: transparent !important; cursor: no-drop;">Login</button>
+                                <p style="font-size: 10px; color: red; text-align: center; cursor: cell !important;">Input your email and password</p>
+                            </div>
+                            <!-- <button v-if="!loginDetail" >Login</button> -->
                             <!-- <p v-if="!loginDetail" style="font-size: 10px; color: red; text-align: center;">Input Email and Password</p> -->
                             <button v-if="loginDetail">
                                 <router-link to="/profile">
