@@ -17,8 +17,10 @@
                     <img src="../../assets/logo.svg" alt="logo">
                 </div> -->
                 <template v-slot:append>
-                    <button class="button dashbtn" style="margin-top: 0px;">
-                        Sign Out
+                    <button class="button dashbtn" style="margin-top: 0px; color: #021c40;">
+                        <a href="/" style="color: #021c40;">
+                            Sign Out
+                        </a>
                     </button>
                 </template>
             </v-app-bar>
