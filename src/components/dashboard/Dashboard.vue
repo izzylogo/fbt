@@ -233,8 +233,9 @@
                 //         amount: "$12.99",
                 //     },
                 // ],
+                
                 datas: [
-                    { date: "11/12/2023", description: "POS DEBIT NETFLIX.COM 760321473 CA", type: "Debit", amount: "-$15.99" },
+                    { date: "11/14/2023", description: "POS DEBIT NETFLIX.COM 760321473 CA", type: "Debit", amount: "-$15.99" },
                     { date: "11/09/2023", description: "POS DEBIT STARBUCKS 238407765 TX", type: "Debit", amount: "-$3.50" },
                     { date: "11/06/2023", description: "POS DEBIT AMAZON.COM 759231065 TN", type: "Debit", amount: "-$49.99" },
                     { date: "11/03/2023", description: "ONLINE TRANSFER 1234567890 CA", type: "Credit", amount: "$500.00" },
